@@ -80,3 +80,27 @@ export function CallBand({
     </div>
   );
 }
+
+export function Differentiators({
+  items,
+  heading = "What makes us different",
+  lead,
+}: {
+  items: readonly { title: string; body: string }[];
+  heading?: string;
+  lead?: string;
+}) {
+  return (
+    <Section>
+      <Heading lead={lead}>{heading}</Heading>
+      <ul className="mt-10 grid gap-x-12 gap-y-9 sm:grid-cols-2">
+        {items.map((d) => (
+          <li key={d.title} className="border-t-2 border-brass pt-5">
+            <h3 className="text-xl text-paper">{d.title}</h3>
+            <p className="mt-2.5 leading-relaxed text-mist">{d.body}</p>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  );
+}

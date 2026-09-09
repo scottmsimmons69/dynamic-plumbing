@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { biz } from "@/lib/business";
-import { Section, Heading, ServiceGrid, CallBand } from "@/components/Bits";
+import { Section, Heading, ServiceGrid, CallBand, Differentiators } from "@/components/Bits";
 
 export const metadata: Metadata = {
   title: "Commercial Plumbing",
@@ -64,6 +64,12 @@ export default function Commercial() {
           </ul>
         </Section>
       )}
+
+      <Differentiators
+        items={biz.differentiators}
+        heading="Why contractors keep calling us back"
+        lead="Six things a one-truck shop cannot say."
+      />
 
       <CallBand
         title="Bidding something out?"

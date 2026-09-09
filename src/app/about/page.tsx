@@ -15,12 +15,11 @@ export default function About() {
         <h1 className="mt-3 max-w-3xl text-4xl leading-tight sm:text-5xl">
           {biz.legalName}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
-          {biz.origin}
-        </p>
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-mist">
-          {biz.whyUs}
-        </p>
+        <div className="mt-6 max-w-2xl space-y-5 text-lg leading-relaxed text-mist">
+          {biz.story.map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
       </Section>
 
       <Section pad="pt-0 pb-16 sm:pb-20">

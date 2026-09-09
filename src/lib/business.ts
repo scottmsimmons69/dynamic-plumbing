@@ -183,11 +183,48 @@ export const biz = {
   quotePolicy: "Free quotes",
   notOffered: ["Well pumps", "Septic tanks"],
 
+  // ---- What actually separates them ---------------------------------------
+  // Every one of these is something a typical one-truck shop cannot say.
+  differentiators: [
+    {
+      title: "Certified for medical gas",
+      body:
+        "Very few plumbing shops in the valley carry it. We have built restrooms on the second floor of an operating surgical hospital, working around active patient care. If your building has an oxygen line, most plumbers cannot touch it.",
+    },
+    {
+      title: "Cleared for the jobs that screen you",
+      body:
+        "OSHA 10 and 30, a drug testing program, prevailing-wage and Davis-Bacon experience, $1,000,000 general liability and $100,000 bonding. Certificate of insurance the same day you ask. This is the paperwork that decides whether you get on the site at all.",
+    },
+    {
+      title: "Usually on site within the hour",
+      body:
+        "Not a four-hour window. When a line lets go in an occupied building, the number that matters is how fast somebody with a license is standing in front of it.",
+    },
+    {
+      title: "Somebody answers the phone",
+      body:
+        "After hours, weekends and holidays, the call still comes to the office and we take it. After-hours rates apply with a two-hour minimum, and we will tell you that before we roll.",
+    },
+    {
+      title: "Same plumbers on both sides",
+      body:
+        "There is no separate residential crew and no subcontractor. The people who run hospital and restaurant work are the ones who show up at your house.",
+    },
+    {
+      title: "Free quotes, no pressure",
+      body:
+        "We will tell you what it takes and what it costs. If the answer is that you do not need us yet, that is the answer.",
+    },
+  ],
+
   // ---- Story --------------------------------------------------------------
-  origin:
-    "Jason was running the jobs for somebody else — quoting the material, scheduling the work, telling them how long it would take. At some point it stopped making sense to do all of that for another man's company.",
-  whyUs:
-    "We are easy to deal with and we do not take advantage of people. That is most of it.",
+  story: [
+    "Dynamic Plumbing & Mechanical started the way most good shops do — with a plumber who was already doing the work.",
+    "Years of running jobs for other companies: pricing the material, scheduling the crews, standing in front of the customer explaining how long it would take. At a certain point it stops making sense to do all of that under somebody else's name.",
+    "So the shop opened, built around one idea — that the plumber who shows up should be the one accountable for the job. Four licensed plumbers. Certified for medical gas and backflow. Prevailing-wage work, hospital corridors, restaurant build-outs, and the house whose sewer line finally gave out on a Tuesday. Usually on site within the hour.",
+    "Quality, integrity and trust are on the truck because they are the whole business. We are straightforward to deal with and we do not take advantage of people. In this trade that should not be worth advertising. It is.",
+  ] as string[],
 } as const;
 
 export const addressLine = `${biz.address.street}, ${biz.address.city}, ${biz.address.state} ${biz.address.zip}`;
