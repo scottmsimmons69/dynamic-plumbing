@@ -34,13 +34,10 @@ export default function Commercial() {
           {[
             ["WV master plumber license", `#${biz.masterLicense}`],
             ["General liability", biz.liabilityLimit],
-            ["Bonding", biz.bonded],
-            ["Years in business", biz.yearsInBusiness],
-            ["Commercial response time", biz.commercialResponse],
-            [
-              "Certifications",
-              biz.certifications.length ? biz.certifications.join(", ") : "TODO",
-            ],
+            ["Bonding capacity", biz.bonded],
+            ["Licensed plumbers on staff", biz.crewSize],
+            ["Response time", biz.commercialResponse],
+            ["Certifications", biz.certifications.join(", ")],
           ].map(([k, v]) => (
             <div key={k} className="bg-slate-deep p-6">
               <dt className="text-sm text-mist">{k}</dt>

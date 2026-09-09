@@ -13,9 +13,10 @@ export default function Home() {
             Commercial plumbing that shows up when the building can&rsquo;t wait.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist sm:text-xl">
-            Licensed plumbers for property managers, general contractors and
-            facility teams — plus the homeowners we&rsquo;ve served for{" "}
-            {biz.yearsInBusiness} years. Same crew, same phone number.
+            Licensed plumbers for general contractors, property managers and
+            facility teams &mdash; and for the homeowner whose sewer line just
+            gave out. Same crew, same phone number, usually on site within the
+            hour.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
@@ -47,7 +48,7 @@ export default function Home() {
               </dd>
             </div>
             <div className="bg-slate-deep p-6">
-              <dt className="text-sm text-mist">Commercial response</dt>
+              <dt className="text-sm text-mist">Response</dt>
               <dd className="mt-1 font-display text-xl text-paper">
                 {biz.commercialResponse}
               </dd>

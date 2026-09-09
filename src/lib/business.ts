@@ -1,9 +1,8 @@
 /**
  * EVERY business fact lives here. Nothing hardcoded in the pages.
- * When the questionnaire comes back, edit this file only.
+ * Populated Sep 9, 2026 from Jason's questionnaire answers.
  *
- * TODO = not yet confirmed by the client. Search "TODO" before launch.
- * Anything still marked TODO must not go live.
+ * TODO = still unconfirmed. Nothing marked TODO ships.
  */
 
 export const biz = {
@@ -11,53 +10,86 @@ export const biz = {
   name: "Dynamic Plumbing & Mechanical",
   legalName: "Dynamic Plumbing & Mechanical LLC",
   short: "DPM",
+  tagline: "Built on Quality, Integrity, and Trust",
 
   // ---- Contact ------------------------------------------------------------
   // NAP must match the Google Business Profile character for character.
-  phone: "(304) 989-0953", // TODO confirm this is the main business line
+  phone: "(304) 989-0953",
   phoneHref: "+13049890953",
-  email: "TODO@example.com", // TODO where do form submissions go?
+  email: "dpmplumbingllc@gmail.com", // switches to the domain address once it exists
   address: {
-    street: "TODO",
-    city: "Poca",
+    street: "1027 Hidden Farms Road",
+    city: "TODO", // TODO Jason gave street only — need city + zip for the NAP
     state: "WV",
     zip: "TODO",
   },
 
   // ---- Hours --------------------------------------------------------------
-  hours: "TODO", // e.g. "Mon–Fri 7:00am – 5:00pm"
-  emergency: "TODO", // TODO is 24/7 emergency actually true? Do not claim it otherwise.
+  hours: "Monday–Friday, 8:00am – 4:30pm",
+  emergency:
+    "After hours, weekends and holidays: call the office and we answer. After-hours rates apply, two-hour minimum.",
 
-  // ---- Credentials — what commercial buyers screen on ---------------------
-  yearsInBusiness: "TODO",
-  masterLicense: "TODO", // WV master plumber license number
-  liabilityLimit: "TODO", // e.g. "$2,000,000"
-  bonded: "TODO",
-  certifications: [] as string[], // backflow, medical gas, OSHA 30, Davis-Bacon...
+  // ---- Credentials --------------------------------------------------------
+  masterLicense: "PL05971",
+  liabilityLimit: "$1,000,000",
+  bonded: "$100,000",
+  carrier: "Erie Insurance", // internal reference; not published
+  crewSize: "4",
+  // "Union" was checked but Jason asked that UA affiliation not appear.
+  // Deliberately omitted from the published list.
+  certifications: [
+    "Backflow certified",
+    "Medical gas certified",
+    "OSHA 10 / 30",
+    "Prevailing wage / Davis-Bacon",
+    "Drug testing program",
+  ] as string[],
 
   // ---- Coverage -----------------------------------------------------------
   serviceArea: [
-    "Poca",
-    "Charleston",
-    "Nitro",
-    "Dunbar",
-    "Cross Lanes",
-    "St. Albans",
-    "South Charleston",
-    "Institute",
     "Hurricane",
-    "Winfield",
+    "Culloden",
     "Teays Valley",
+    "Scott Depot",
+    "Winfield",
+    "St. Albans",
+    "Nitro",
+    "Poca",
+    "Red House",
+    "Eleanor",
+    "South Charleston",
+    "Charleston",
+    "Kanawha City",
   ],
-  counties: "Kanawha and Putnam counties",
+  counties: "Putnam and Kanawha counties",
+
+  // ---- Proof --------------------------------------------------------------
+  googleReviewCount: 26,
+  googleReviewUrl: "TODO", // TODO pull the "write a review" / profile link from GBP
+  // Individual reference contacts are NOT published. They live in the client file.
+  projects: [
+    {
+      name: "Travelers Center",
+      scope: "Full plumbing package, built for G&G.",
+    },
+    {
+      name: "Charleston Surgical Hospital",
+      scope:
+        "Second-floor restroom build-out in an operating medical facility, worked around active patient care.",
+    },
+    {
+      name: "Shumaker residence",
+      scope: "Complete plumbing for RidgeLine.",
+    },
+  ] as { name: string; scope: string; year?: string }[],
 
   // ---- Commercial ---------------------------------------------------------
-  commercialResponse: "TODO", // the thing property managers care about most
+  commercialResponse: "Usually on site within the hour",
   commercialServices: [
     {
       title: "Service & repair",
       body:
-        "Leaks, backups, failed water heaters and boilers. One call, and a licensed plumber is on site — not a dispatcher taking a message.",
+        "Leaks, backups, failed water heaters and boilers. Call the office and you get a licensed plumber moving, not a message taken.",
     },
     {
       title: "New construction",
@@ -70,14 +102,31 @@ export const biz = {
         "Restaurant, retail, medical and office build-outs. We work around the other trades instead of holding them up.",
     },
     {
+      title: "Design-build",
+      body:
+        "Bring us in early and we will help you get the plumbing right before it is in the ground.",
+    },
+    {
+      title: "Medical gas",
+      body:
+        "Certified medical gas installation and service. Very few shops in the valley are certified for this work.",
+    },
+    {
       title: "Backflow testing",
       body:
         "Certified testing, repair and annual certification, with the paperwork filed so you are not chasing it.",
     },
     {
-      title: "Grease interceptors",
-      body:
-        "Sizing, installation and service that passes health-department inspection.",
+      title: "Sewer & drain",
+      body: "Cabling and jetting for lines that back up when the building is full.",
+    },
+    {
+      title: "Water heaters & boilers",
+      body: "Commercial repair and replacement, sized right for the building.",
+    },
+    {
+      title: "Gas piping",
+      body: "New runs, repairs and appliance connections by a licensed plumber.",
     },
     {
       title: "Preventive maintenance",
@@ -87,38 +136,58 @@ export const biz = {
   ],
 
   // ---- Residential --------------------------------------------------------
+  // Jason does NOT do well pumps or septic tanks. Keep them off the site.
+  residentialTop3: ["Sewer lines", "Gas lines", "Water line repair & installation"],
   residentialServices: [
     {
+      title: "Sewer lines",
+      body: "Repair and full replacement, from a spot fix to the whole run.",
+    },
+    {
+      title: "Gas lines",
+      body: "New runs, repairs and appliance hookups by a licensed plumber.",
+    },
+    {
+      title: "Water lines",
+      body: "Repair and installation, inside the house or out to the meter.",
+    },
+    {
       title: "Water heaters",
-      body: "Repair and replacement, tank and tankless. Usually same day.",
+      body: "Repair and replacement, tank and tankless.",
     },
     {
       title: "Drain cleaning",
-      body: "Kitchen, bath, main line. Cabled or jetted depending on what's in there.",
+      body: "Kitchen, bath, main line — cabled or jetted depending on what is in there.",
     },
     {
       title: "Leak detection & repair",
       body: "Found and fixed with the smallest hole we can get away with.",
     },
     {
-      title: "Sewer lines",
-      body: "Camera inspection, spot repair, full replacement.",
+      title: "Repipes",
+      body: "Whole-house repiping when patching has stopped being worth it.",
     },
     {
       title: "Fixtures & remodels",
-      body: "Sinks, tubs, toilets, and the rough-in behind a full bath remodel.",
+      body: "Sinks, tubs, toilets, and the rough-in behind a full bath or kitchen remodel.",
     },
     {
-      title: "Gas lines",
-      body: "New runs, repairs, and appliance hookups by a licensed plumber.",
+      title: "Sump pumps",
+      body: "Installed and serviced so the basement stays dry.",
+    },
+    {
+      title: "Water treatment",
+      body: "Softeners and filtration for water that needs help.",
     },
   ],
+  quotePolicy: "Free quotes",
+  notOffered: ["Well pumps", "Septic tanks"],
 
-  // ---- Proof --------------------------------------------------------------
-  // TODO real projects from the questionnaire. Nothing invented ships.
-  projects: [] as { name: string; scope: string; year?: string }[],
-  // TODO real reviews only. Never placeholder testimonials on a live site.
-  reviews: [] as { quote: string; author: string }[],
+  // ---- Story --------------------------------------------------------------
+  origin:
+    "Jason was running the jobs for somebody else — quoting the material, scheduling the work, telling them how long it would take. At some point it stopped making sense to do all of that for another man's company.",
+  whyUs:
+    "We are easy to deal with and we do not take advantage of people. That is most of it.",
 } as const;
 
 export const addressLine = `${biz.address.street}, ${biz.address.city}, ${biz.address.state} ${biz.address.zip}`;

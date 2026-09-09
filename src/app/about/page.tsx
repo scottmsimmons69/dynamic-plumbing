@@ -16,17 +16,19 @@ export default function About() {
           {biz.legalName}
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
-          TODO &mdash; the origin story, in the owner&rsquo;s own words. How the
-          business started, and why people call them instead of the next guy.
+          {biz.origin}
+        </p>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-mist">
+          {biz.whyUs}
         </p>
       </Section>
 
       <Section pad="pt-0 pb-16 sm:pb-20">
         <dl className="grid gap-px overflow-hidden rounded border border-line/60 bg-line/60 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            ["Years in business", biz.yearsInBusiness],
             ["WV master plumber", `#${biz.masterLicense}`],
             ["General liability", biz.liabilityLimit],
+            ["Bonded", biz.bonded],
             ["Service area", biz.counties],
           ].map(([k, v]) => (
             <div key={k} className="bg-slate-deep p-6">
