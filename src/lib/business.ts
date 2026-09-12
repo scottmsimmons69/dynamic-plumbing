@@ -231,3 +231,29 @@ export const biz = {
 } as const;
 
 export const addressLine = `${biz.address.street}, ${biz.address.city}, ${biz.address.state} ${biz.address.zip}`;
+
+/**
+ * Job photos. Captions name the WORK and the BUILDING TYPE, never the client
+ * and never who worked it. Files live in public/photos/<side>/.
+ */
+export const photos = {
+  commercial: [
+    { src: "/photos/commercial/medical-air-plant.jpg", alt: "Medical air plant and distribution" },
+    { src: "/photos/commercial/booster-pump-assembly.jpg", alt: "Domestic water booster system" },
+    { src: "/photos/commercial/backflow-preventer.jpg", alt: "Backflow preventer installation" },
+    { src: "/photos/commercial/commercial-restroom.jpg", alt: "Commercial restroom build-out" },
+    { src: "/photos/commercial/exterior-line-repair.jpg", alt: "Exterior service line repair" },
+    { src: "/photos/commercial/exterior-line-restored.jpg", alt: "Service line repair, surface restored" },
+  ],
+  residential: [
+    { src: "/photos/residential/under-slab-rough-in.jpg", alt: "Under-slab DWV rough-in" },
+    { src: "/photos/residential/tankless-water-heater.jpg", alt: "Tankless water heater installation" },
+    { src: "/photos/residential/tankless-install.jpg", alt: "Tankless water heater replacement" },
+    { src: "/photos/residential/sewer-line-bedding.jpg", alt: "Sewer line replacement" },
+    { src: "/photos/residential/water-line-leak.jpg", alt: "Water service leak located and repaired" },
+    { src: "/photos/residential/gas-line-trench.jpg", alt: "Underground gas service" },
+    { src: "/photos/residential/gas-line-concrete-restored.jpg", alt: "Gas service in, concrete replaced" },
+    { src: "/photos/residential/gas-line-run.jpg", alt: "Underground gas line run" },
+    { src: "/photos/residential/gas-line-new-construction.jpg", alt: "Gas service, new construction" },
+  ],
+} as const;

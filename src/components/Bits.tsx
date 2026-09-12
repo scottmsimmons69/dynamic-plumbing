@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { biz } from "@/lib/business";
 
@@ -98,6 +99,38 @@ export function Differentiators({
           <li key={d.title} className="border-t-2 border-brass pt-5">
             <h3 className="text-xl text-paper">{d.title}</h3>
             <p className="mt-2.5 leading-relaxed text-mist">{d.body}</p>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  );
+}
+
+export function PhotoGrid({
+  items,
+  heading = "Recent work",
+  lead,
+}: {
+  items: readonly { src: string; alt: string }[];
+  heading?: string;
+  lead?: string;
+}) {
+  return (
+    <Section>
+      <Heading lead={lead}>{heading}</Heading>
+      <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((p) => (
+          <li key={p.src} className="overflow-hidden rounded border border-line/60">
+            <div className="relative aspect-[4/3] bg-slate-deep">
+              <Image
+                src={p.src}
+                alt={p.alt}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <p className="bg-slate-deep px-4 py-3 text-sm text-mist">{p.alt}</p>
           </li>
         ))}
       </ul>
