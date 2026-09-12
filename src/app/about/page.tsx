@@ -39,7 +39,7 @@ export default function About() {
       </Section>
 
       <Section>
-        <Heading lead="Both sides of the business run out of the same shop, with the same licensed plumbers.">
+        <Heading lead="Both sides of the business run out of the same shop, with licensed plumbers.">
           Commercial and residential
         </Heading>
       </Section>
