@@ -17,7 +17,7 @@ export default function Commercial() {
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
           Licensed, insured and used to working inside somebody else&rsquo;s
-          schedule. We show up when we said, we hit inspection the first time,
+          schedule. We show up when we say we will, we pass inspection the first time,
           and we tell you early if something is going to slip.
         </p>
       </Section>
