@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { biz } from "@/lib/business";
-import { Section, Heading, ServiceGrid, CallBand } from "@/components/Bits";
+import { biz, photos } from "@/lib/business";
+import { Section, Heading, ServiceGrid, CallBand, PhotoGrid } from "@/components/Bits";
 
 export const metadata: Metadata = {
   title: "Residential Plumbing",
@@ -13,7 +13,7 @@ export default function Residential() {
       <Section pad="pt-16 pb-8 sm:pt-20">
         <p className="font-display text-lg text-brass">Homes</p>
         <h1 className="mt-3 max-w-3xl text-4xl leading-tight sm:text-5xl">
-          The same licensed plumbers, at your house.
+          A licensed plumber, at your house.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
           We do a lot of commercial work, and it makes us better in a crawlspace,
@@ -42,6 +42,12 @@ export default function Residential() {
           ))}
         </ol>
       </Section>
+
+      <PhotoGrid
+        items={photos.residential}
+        heading="Recent work"
+        lead="Water heaters, sewer and water lines, gas service and under-slab rough-in."
+      />
 
       <CallBand
         title="No hot water?"
