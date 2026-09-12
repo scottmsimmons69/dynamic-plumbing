@@ -35,8 +35,9 @@ export const biz = {
   bonded: "$100,000",
   carrier: "Erie Insurance", // internal reference; not published
   crewSize: "4",
-  // "Union" was checked but Jason asked that UA affiliation not appear.
-  // Deliberately omitted from the published list.
+  // Union affiliation IS published — stated as a credential alongside the
+  // license number, never as a headline. Confirmed with Jason Sep 10, 2026.
+  labor: "Union shop",
   certifications: [
     "Backflow certified",
     "Medical gas certified",

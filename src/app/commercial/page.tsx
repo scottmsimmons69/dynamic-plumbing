@@ -36,6 +36,7 @@ export default function Commercial() {
             ["General liability", biz.liabilityLimit],
             ["Bonding capacity", biz.bonded],
             ["Licensed plumbers on staff", biz.crewSize],
+            ["Labor", biz.labor],
             ["Response time", biz.commercialResponse],
             ["Certifications", biz.certifications.join(", ")],
           ].map(([k, v]) => (

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 lg:col-span-1">
           <Image
-            src="/logo/dpm-logo-light-800.png"
+            src="/logo/dpm-full-light-800.png"
             alt={biz.legalName}
             width={800}
             height={359}

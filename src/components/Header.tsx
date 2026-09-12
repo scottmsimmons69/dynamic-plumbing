@@ -15,7 +15,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-5 py-3">
         <Link href="/" className="shrink-0" aria-label={`${biz.name} home`}>
           <Image
-            src="/logo/dpm-logo-light-800.png"
+            src="/logo/dpm-full-light-800.png"
             alt={biz.legalName}
             width={800}
             height={359}
