@@ -35,8 +35,7 @@ export default function Commercial() {
             ["WV master plumber license", `#${biz.masterLicense}`],
             ["General liability", biz.liabilityLimit],
             ["Bonding capacity", biz.bonded],
-            ["Licensed plumbers on staff", biz.crewSize],
-            ["Labor", biz.labor],
+            ["Manpower", "Staffed to the size of the job"],
             ["Response time", biz.commercialResponse],
             ["Certifications", biz.certifications.join(", ")],
           ].map(([k, v]) => (
@@ -69,7 +68,7 @@ export default function Commercial() {
       <Differentiators
         items={biz.differentiators}
         heading="Why contractors keep calling us back"
-        lead="Six things a one-truck shop cannot say."
+        lead="What we can put in writing before you ever call."
       />
 
       <CallBand

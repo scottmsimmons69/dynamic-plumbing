@@ -19,9 +19,9 @@ export const biz = {
   email: "dpmplumbingllc@gmail.com", // switches to the domain address once it exists
   address: {
     street: "1027 Hidden Farms Road",
-    city: "TODO", // TODO Jason gave street only — need city + zip for the NAP
+    city: "Poca",
     state: "WV",
-    zip: "TODO",
+    zip: "25159",
   },
 
   // ---- Hours --------------------------------------------------------------
@@ -30,14 +30,13 @@ export const biz = {
     "After hours, weekends and holidays: call the office and we answer. After-hours rates apply, two-hour minimum.",
 
   // ---- Credentials --------------------------------------------------------
+  // RULE: publish company credentials, never crew assignment or headcount.
   masterLicense: "PL05971",
   liabilityLimit: "$1,000,000",
   bonded: "$100,000",
   carrier: "Erie Insurance", // internal reference; not published
-  crewSize: "4",
-  // Union affiliation IS published — stated as a credential alongside the
-  // license number, never as a headline. Confirmed with Jason Sep 10, 2026.
-  labor: "Union shop",
+  crewSize: "4", // INTERNAL ONLY — deliberately not rendered anywhere
+  combinedExperience: "Over 50 years of combined experience",
   certifications: [
     "Backflow certified",
     "Medical gas certified",
@@ -61,8 +60,11 @@ export const biz = {
     "South Charleston",
     "Charleston",
     "Kanawha City",
+    "Huntington",
+    "Barboursville",
+    "Milton",
   ],
-  counties: "Putnam and Kanawha counties",
+  counties: "Putnam, Kanawha and Cabell counties",
 
   // ---- Proof --------------------------------------------------------------
   googleReviewCount: 26,
@@ -185,7 +187,7 @@ export const biz = {
   notOffered: ["Well pumps", "Septic tanks"],
 
   // ---- What actually separates them ---------------------------------------
-  // Every one of these is something a typical one-truck shop cannot say.
+  // Company credentials only. No crew-assignment or headcount claims.
   differentiators: [
     {
       title: "Certified for medical gas",
@@ -203,14 +205,14 @@ export const biz = {
         "Not a four-hour window. When a line lets go in an occupied building, the number that matters is how fast somebody with a license is standing in front of it.",
     },
     {
+      title: "Over 50 years of combined experience",
+      body:
+        "The shop is what it is because of the miles behind it — decades of commercial and residential plumbing between the people running it. You are not paying us to learn on your building.",
+    },
+    {
       title: "Somebody answers the phone",
       body:
         "After hours, weekends and holidays, the call still comes to the office and we take it. After-hours rates apply with a two-hour minimum, and we will tell you that before we roll.",
-    },
-    {
-      title: "Same plumbers on both sides",
-      body:
-        "There is no separate residential crew and no subcontractor. The people who run hospital and restaurant work are the ones who show up at your house.",
     },
     {
       title: "Free quotes, no pressure",
@@ -223,7 +225,7 @@ export const biz = {
   story: [
     "Dynamic Plumbing & Mechanical started the way most good shops do — with a plumber who was already doing the work.",
     "Years of running jobs for other companies: pricing the material, scheduling the crews, standing in front of the customer explaining how long it would take. At a certain point it stops making sense to do all of that under somebody else's name.",
-    "So the shop opened, built around one idea — that the plumber who shows up should be the one accountable for the job. Four licensed plumbers. Certified for medical gas and backflow. Prevailing-wage work, hospital corridors, restaurant build-outs, and the house whose sewer line finally gave out on a Tuesday. Usually on site within the hour.",
+    "So the shop opened, built around one idea — that the plumber who shows up should be the one accountable for the job. Certified for medical gas and backflow. Prevailing-wage work, hospital corridors and restaurant build-outs — and, on the other side of the business, the house whose sewer line finally gave out on a Tuesday. Usually on site within the hour.",
     "Quality, integrity and trust are on the truck because they are the whole business. We are straightforward to deal with and we do not take advantage of people. In this trade that should not be worth advertising. It is.",
   ] as string[],
 } as const;
