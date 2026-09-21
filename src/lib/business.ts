@@ -68,7 +68,8 @@ export const biz = {
 
   // ---- Proof --------------------------------------------------------------
   googleReviewCount: 26,
-  googleReviewUrl: "TODO", // TODO pull the "write a review" / profile link from GBP
+  googleReviewUrl: "https://maps.google.com/?cid=17922058820932619800", // public profile link. The "write a review" link needs owner access.
+  facebookUrl: "https://www.facebook.com/p/Dynamic-Plumbing-Mechanical-LLC-61578116063331/",
   // Individual reference contacts are NOT published. They live in the client file.
   projects: [
     {
@@ -230,7 +231,7 @@ export const biz = {
   ] as string[],
 } as const;
 
-export const addressLine = `${biz.address.street}, ${biz.address.city}, ${biz.address.state} ${biz.address.zip}`;
+export const addressLine = `${biz.address.city}, ${biz.address.state} ${biz.address.zip}`;
 
 /**
  * Job photos. Captions name the WORK and the BUILDING TYPE, never the client

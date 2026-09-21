@@ -20,12 +20,13 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* NAP block — must match the Google Business Profile character for character */}
+        {/* NAP block — must match the Google Business Profile.
+            GBP is a service-area listing with the address hidden, so the
+            street is deliberately NOT published. City/state only. */}
         <div>
           <h3 className="text-sm tracking-wider text-paper">Reach us</h3>
           <address className="mt-3 space-y-1.5 text-[15px] not-italic leading-relaxed text-mist">
             <div>{biz.legalName}</div>
-            <div>{biz.address.street}</div>
             <div>
               {biz.address.city}, {biz.address.state} {biz.address.zip}
             </div>
@@ -38,6 +39,28 @@ export default function Footer() {
               </a>
             </div>
           </address>
+          <div className="mt-4 space-y-1.5 text-[15px]">
+            <div>
+              <a
+                href={biz.googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brass hover:text-paper"
+              >
+                Read our reviews on Google
+              </a>
+            </div>
+            <div>
+              <a
+                href={biz.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-mist hover:text-paper"
+              >
+                Facebook
+              </a>
+            </div>
+          </div>
         </div>
 
         <div>

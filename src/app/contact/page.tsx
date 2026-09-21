@@ -36,7 +36,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <h2 className="text-xl text-paper">Shop</h2>
+            <h2 className="text-xl text-paper">Based in</h2>
             <address className="mt-2.5 not-italic leading-relaxed text-mist">
               {biz.legalName}
               <br />
