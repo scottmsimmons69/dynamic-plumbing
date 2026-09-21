@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
+import { FaStar } from "react-icons/fa";
 import { biz } from "@/lib/business";
 import { Section, Heading, CallBand } from "@/components/Bits";
 
@@ -15,15 +17,11 @@ export default function Home() {
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist sm:text-xl">
             Licensed plumbers for general contractors, property managers and
             facility teams &mdash; and for the homeowner whose sewer line just
-            gave out. Same crew, same phone number, usually on site within the
-            hour.
+            gave out. One phone number, and usually on site within the hour.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
-            <a
-              href={`tel:${biz.phoneHref}`}
-              className="rounded bg-brass px-7 py-4 font-display text-lg font-semibold text-ink transition-colors hover:bg-brass-deep hover:text-paper"
-            >
+            <a href={`tel:${biz.phoneHref}`} className="rounded bg-brass px-7 py-4 font-display text-lg font-semibold text-ink transition-colors hover:bg-brass-deep hover:text-paper">
               Call {biz.phone}
             </a>
             <Link
@@ -34,7 +32,23 @@ export default function Home() {
             </Link>
           </div>
 
-          <dl className="mt-14 grid max-w-3xl gap-px overflow-hidden rounded border border-line/60 bg-line/60 sm:grid-cols-3">
+          {/* Google reviews — rating and count live in business.ts.
+              Count is shown as "N+" so it stays true as reviews come in.
+              The RATING can go stale: update googleRating if it changes. */}
+          <a href={biz.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded border border-line/60 bg-slate-deep px-4 py-2.5 text-mist transition-colors hover:border-brass hover:text-paper">
+            <FcGoogle className="h-5 w-5 shrink-0" aria-hidden="true" />
+            <span className="flex gap-0.5 text-amber-400" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <FaStar key={i} className="h-4 w-4" />
+              ))}
+            </span>
+            <span>
+              <span className="font-semibold text-paper">{biz.googleRating}</span>
+              {" "}&middot; {biz.googleReviewCount}+ reviews on Google
+            </span>
+          </a>
+
+          <dl className="mt-12 grid max-w-3xl gap-px overflow-hidden rounded border border-line/60 bg-line/60 sm:grid-cols-3">
             <div className="bg-slate-deep p-6">
               <dt className="text-sm text-mist">Licensed</dt>
               <dd className="mt-1 font-display text-xl text-paper">
@@ -78,9 +92,9 @@ export default function Home() {
           <div className="bg-slate-deep p-9">
             <h2 className="text-2xl">Homes</h2>
             <p className="mt-3 leading-relaxed text-mist">
-              Water heaters, drains, leaks, sewer lines and remodels. The same
-              licensed plumbers who work the commercial jobs — not a separate
-              crew and not a subcontractor.
+              Water heaters, drains, leaks, sewer lines and remodels &mdash; from
+              a licensed plumber who has seen the problem before, with a straight
+              answer on what it takes to fix it.
             </p>
             <Link
               href="/residential"

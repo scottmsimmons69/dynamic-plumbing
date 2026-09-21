@@ -67,7 +67,8 @@ export const biz = {
   counties: "Putnam, Kanawha and Cabell counties",
 
   // ---- Proof --------------------------------------------------------------
-  googleReviewCount: 26,
+  googleReviewCount: 26, // shown as "26+" so it stays true as reviews come in
+  googleRating: "5.0", // CHECK MONTHLY — update the day it changes
   googleReviewUrl: "https://maps.google.com/?cid=17922058820932619800", // public profile link. The "write a review" link needs owner access.
   facebookUrl: "https://www.facebook.com/p/Dynamic-Plumbing-Mechanical-LLC-61578116063331/",
   // Individual reference contacts are NOT published. They live in the client file.

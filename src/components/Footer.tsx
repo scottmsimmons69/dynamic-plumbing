@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 import { biz } from "@/lib/business";
 
 export default function Footer() {
@@ -31,32 +33,21 @@ export default function Footer() {
               {biz.address.city}, {biz.address.state} {biz.address.zip}
             </div>
             <div className="pt-1">
-              <a
-                href={`tel:${biz.phoneHref}`}
-                className="text-paper hover:text-brass"
-              >
+              <a href={`tel:${biz.phoneHref}`} className="text-paper hover:text-brass">
                 {biz.phone}
               </a>
             </div>
           </address>
           <div className="mt-4 space-y-1.5 text-[15px]">
             <div>
-              <a
-                href={biz.googleReviewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-brass hover:text-paper"
-              >
+              <a href={biz.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-brass hover:text-paper">
+                <FcGoogle className="h-4 w-4 shrink-0" aria-hidden="true" />
                 Read our reviews on Google
               </a>
             </div>
             <div>
-              <a
-                href={biz.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-mist hover:text-paper"
-              >
+              <a href={biz.facebookUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-mist hover:text-paper">
+                <FaFacebook className="h-4 w-4 shrink-0 text-[#1877F2]" aria-hidden="true" />
                 Facebook
               </a>
             </div>
