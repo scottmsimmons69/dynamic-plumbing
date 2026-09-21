@@ -9,9 +9,23 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-line/60">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
-          <p className="font-display text-lg text-brass">{biz.counties}</p>
-          <h1 className="mt-3 max-w-3xl text-4xl leading-[1.08] sm:text-6xl">
+        <div className="mx-auto max-w-6xl px-5 pb-20 pt-10 sm:pb-24 sm:pt-14">
+          {/* Google reviews — rating and count live in business.ts.
+              Count is shown as "N+" so it stays true as reviews come in.
+              The RATING can go stale: update googleRating if it changes. */}
+          <a href={biz.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 text-mist transition-colors hover:text-paper">
+            <FcGoogle className="h-5 w-5 shrink-0" aria-hidden="true" />
+            <span className="flex gap-0.5 text-amber-400" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <FaStar key={i} className="h-4 w-4" />
+              ))}
+            </span>
+            <span>
+              <span className="font-semibold text-paper">{biz.googleRating}</span>
+              {" "}&middot; {biz.googleReviewCount}+ reviews on Google
+            </span>
+          </a>
+          <h1 className="mt-5 max-w-3xl text-4xl leading-[1.08] sm:text-6xl">
             Commercial plumbing that shows up when the building can&rsquo;t wait.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist sm:text-xl">
@@ -32,22 +46,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Google reviews — rating and count live in business.ts.
-              Count is shown as "N+" so it stays true as reviews come in.
-              The RATING can go stale: update googleRating if it changes. */}
-          <a href={biz.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded border border-line/60 bg-slate-deep px-4 py-2.5 text-mist transition-colors hover:border-brass hover:text-paper">
-            <FcGoogle className="h-5 w-5 shrink-0" aria-hidden="true" />
-            <span className="flex gap-0.5 text-amber-400" aria-hidden="true">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <FaStar key={i} className="h-4 w-4" />
-              ))}
-            </span>
-            <span>
-              <span className="font-semibold text-paper">{biz.googleRating}</span>
-              {" "}&middot; {biz.googleReviewCount}+ reviews on Google
-            </span>
-          </a>
-
+          
           <dl className="mt-12 grid max-w-3xl gap-px overflow-hidden rounded border border-line/60 bg-line/60 sm:grid-cols-3">
             <div className="bg-slate-deep p-6">
               <dt className="text-sm text-mist">Licensed</dt>
